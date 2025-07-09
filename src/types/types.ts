@@ -6,3 +6,11 @@ export interface Product {
   stock: number;
   createdAt: string; // O Date, dependiendo cómo lo manejes
 }
+
+export interface ProductDetailProps {
+  params: { id: string };
+}
+
+export interface DescriptionButtonProps {
+  description: string;  // O cualquier otro tipo que necesites
+}
