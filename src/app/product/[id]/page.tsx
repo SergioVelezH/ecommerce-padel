@@ -1,3 +1,4 @@
+import BuyButton from "@/components/buyButton";
 import DescriptionButton from "@/components/descriptionButton";
 import NavBar from "@/components/navBar";
 import { prisma } from "@/lib/prisma";
@@ -34,9 +35,7 @@ export default async function ProductDetail({ params }: ProductDetailProps) {
           <p className="text-3xl font-bold">U$D{product?.price}</p>
           <p className="text-base text-gray-400">{product?.description}</p>
           <div className="w-full flex items-start justify-center gap-4">
-            <button className="w-[80%] h-[52px] rounded-full bg-gray-200 text-black">
-              Buy Now
-            </button>
+            <BuyButton product={product} />
             <button className="w-[50%] h-[52px] border rounded-full bg-black text-white">
               Add to Cart
             </button>
